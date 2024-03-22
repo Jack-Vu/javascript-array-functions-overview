@@ -106,7 +106,7 @@ const randomWords = [
   "love",
   "coding",
 ];
-// sort() the is function mutates the original array you can sort string and number elements
+// sort() this function mutates the original array you can sort string and number elements
 // when used on an array of strings you can plainly use .sort()
 // the sorting below cause randomWords to turn into this
 // [
@@ -128,9 +128,15 @@ randomWords.sort();
 const randomNumbers = [1, 5, 6, 21, 3, 8, 2, 111, 9];
 randomNumbers.sort((a, b) => a - b);
 
-// a common operation we have used with manipulating an array is spread operator
-// an easy way to duplicate the same array twice with the same numbers is with the spread operator
+// some() this function is a way to check to see if at least one element in the array meets the statement within the call back function
+// if they do meet the requirement of the call back function it will return true
+// if no elements meet the requirements within the call back function then te return will be false
+// using the randomNumbers array as an example
+const someTest = randomNumbers.some((number) => number > 90); // true
+const someTest1 = randomNumbers.some((number) => number > 1000); // false
 
-const doubleNumbers = [...numbers, ...numbers]; // [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
-
-// spread isn't a array specific function, but it is something we have used and I wanted to note it as memory here
+// find() this function will search for the first element that passes the requirements in the call back function
+// that value is returned but if the value if no element meets the requirements then undefined is returned
+// using randomNumbers array again
+const findTest = randomNumbers.find((number) => number > 100); // 111
+const findTest1 = randomNumbers.find((number) => number > 1000); // undefined
