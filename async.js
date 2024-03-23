@@ -120,3 +120,4 @@ console.log('End');
 
 // The event loop is a fundamental part of the JS runtime environment, ensuring that asynchronous code is executed at the right time
 
+// Closures mentioned in the OOP.js is used in maintaining state in Async operations like callback and event handlers
